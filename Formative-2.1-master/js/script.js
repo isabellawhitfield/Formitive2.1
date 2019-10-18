@@ -5,7 +5,7 @@ function findMax(aNums) {
     var iMax = aNums[0];
 
     for(var iCount=0; iCount<aNums.length; iCount++) {
-        if(iMax > aNums[iCount]) {
+        if(iMax < aNums[iCount]) {
             iMax = aNums[iCount];
         }
     }
