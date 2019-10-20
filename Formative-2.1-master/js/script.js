@@ -38,7 +38,7 @@ for(var iCount=0; iCount<iSize; iCount++) {
 var aAverageGrades = [];
 
 for(var iCount=0; iCount<iSize; iCount++) {
-    var fAverage = (aGradesPhysics[iCount] + aGradesChemistry[iCount] + aGradesBiology[iCount]) / aGradesPhysics.length;
+    var fAverage = (aGradesPhysics[iCount] + aGradesChemistry[iCount] + aGradesBiology[iCount]) / 3;
     aAverageGrades.push(fAverage);
 }
 var iTopGrade = findMax(aAverageGrades);
@@ -46,7 +46,7 @@ var iTopGrade = findMax(aAverageGrades);
 //output: list result for each student and top grade
 
 
-for(var iCount=1; iCount<aAverageGrades.length; iCount++) {
+for(var iCount=0; iCount<aAverageGrades.length; iCount++) {
     if(aAverageGrades[iCount] < 50) {
 
         document.write('Student '+(iCount+1)+': Fail'+'<br>');
@@ -57,7 +57,7 @@ for(var iCount=1; iCount<aAverageGrades.length; iCount++) {
 
     } else {
 
-        document.write.getElementById('Student').innerHTML = + (iCount + 1) + 'Pass with Distinction' + '<br>';
+      document.write('Student ' + (iCount + 1) + ': Pass with Distinction' + '<br>')
     }
 }
 
